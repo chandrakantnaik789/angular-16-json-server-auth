@@ -6,7 +6,17 @@
       "author": "typicode"
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "email": "test@gmail.com",
+      "password": "$2a$10$lMzyA7nqhUEVzTN1830kyuMY3WaYqXXBa2TPHHF2XCWdaMzOmSQCi",
+      "username": "test",
+      "confirmpassword": "Test@123",
+      "fullname": "test",
+      "phonenumber": "1234567890",
+      "id": 1
+    }
+  ],
   "signUpUsers": [
     {
       "username": "sashi",

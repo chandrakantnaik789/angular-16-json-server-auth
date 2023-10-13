@@ -21,9 +21,9 @@ export class LoginComponent {
       password: ['', Validators.required]
     });
   }
+
   login(){
    this.loginFormSubmit = true;
-   //console.log(this.loginForm.value);
    this.http.get<any>('http://localhost:3000/signUpUsers').
    subscribe(res => {
     const user = res.find((a : any) =>{

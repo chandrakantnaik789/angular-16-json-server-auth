@@ -1,55 +1,65 @@
-<div class="container mt-5">
-    <div class="col-md-8 mx-auto">
-        <div class="card">
-            <div class="card-body">
-                <div class="text-center">
-                    <h1>Registration Form</h1>
-                    <form class="form" [formGroup]="signupForm" (ngSubmit)="signUp()">
-                        <div class="form-group mb-3">
-                            <label>Username</label>
-                            <input type="text" class="form-control" formControlName="username">
-                            <p class="alert alert-danger" *ngIf="signupForm.controls['username'].hasError('pattern')">
-                                Name must be less than 20 chars.
-                                </p>     
-                              <span class="form-text-error" *ngIf="signupForm.controls['username']?.invalid && signupSubmit">
-                                Username is required.
-                              </span>
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card">
+        <div class="card-body">
+            <div class="text-center">
+                <h1>Registration Form</h1>
+                <form class="form" [formGroup]="signupForm" (submit)="signUp()">
+                    <div class="form-group mb-3">
+                        <label>Username</label>
+                        <input type="text" class="form-control" formControlName="username">
+                        <p class="alert alert-danger" *ngIf="signupForm.controls['username'].hasError('pattern')">
+                            Name must be less than 20 chars.
+                            </p>     
+                          <span class="form-text-error" *ngIf="signupForm.controls['username']?.invalid && signupSubmit">
+                            Username is required.
+                          </span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Password</label>
+                        <input type="password" class="form-control" formControlName="password">
+                        <p class="alert alert-danger" *ngIf="signupForm.controls['password'].hasError('pattern')">
+                            Invalid Password.
+                          </p>
+                          <span class="form-text-error" *ngIf="signupForm.controls['password']?.invalid && signupSubmit">
+                            Password is required.
+                          </span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control" formControlName="confirmpassword">
+                        <div *ngIf="signupForm.get('confirmpassword')?.hasError('mustMatch')">
+                            Passwords do not match.
+                          </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control" formControlName="fullname">
+                     <p class="alert alert-danger" *ngIf="signupForm.controls['fullname'].hasError('pattern')">
+                        Full Name should contain only characters and be less than 50 characters.
+                        </p>
+                        <span class="form-text-error" *ngIf="signupForm.controls['fullname']?.invalid && signupSubmit">
+                        Full Name is required.
+                        </span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Phone Number</label>
+                        <input type="text" class="form-control" formControlName="phonenumber">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Email</label>
+                        <input type="email" class="form-control" formControlName="email">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <button type="submit" style="width: 100%;" class="w-full btn btn-success">Register</button>
                         </div>
-                        <div class="form-group mb-3">
-                            <label>Password</label>
-                            <input type="password" class="form-control" formControlName="password">
-                            <p class="alert alert-danger" *ngIf="signupForm.controls['password'].hasError('pattern')">
-                                Invalid Password.
-                              </p>
-                              <span class="form-text-error" *ngIf="signupForm.controls['password']?.invalid && signupSubmit">
-                                Password is required.
-                              </span>
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
+                            <button type="reset" style="width: 100%;" class="btn btn-warning">Reset</button>
                         </div>
-                        <div class="form-group mb-3">
-                            <label>Confirm Password</label>
-                            <input type="password" class="form-control" formControlName="confirmpassword">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label>Full Name</label>
-                            <input type="text" class="form-control" formControlName="fullname">
-                         <p class="alert alert-danger" *ngIf="signupForm.controls['fullname'].hasError('pattern')">
-                            Full Name should contain only characters and be less than 50 characters.
-                            </p>
-                            <span class="form-text-error" *ngIf="signupForm.controls['fullname']?.invalid && signupSubmit">
-                            Full Name is required.
-                            </span>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label>Phone Number</label>
-                            <input type="text" class="form-control" formControlName="phonenumber">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label>Email</label>
-                            <input type="email" class="form-control" formControlName="email">
-                        </div>
-                        <div class="form-group mb-3">
-                            <button type="submit" class="btn btn-success">REGISTER</button>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
+        </div>
+    </div>
+</div>
