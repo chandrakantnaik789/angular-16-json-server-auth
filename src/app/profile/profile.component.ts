@@ -45,8 +45,23 @@ export class ProfileComponent {
     });
   }
 
+  onProfilePictureChange(event: Event) {
+    const inputElement = event.target as HTMLInputElement;
+    if (inputElement.files && inputElement.files[0]) {
+      const file = inputElement.files[0];
+      const reader = new FileReader();
+
+      reader.onload = (e) => {
+        // Read the file and set it as a base64 string
+        this.profileForm.patchValue({profilePicture: reader.result as string });
+      };
+
+      reader.readAsDataURL(file);
+    }
+  }
+
   updateValue(user: any){
-    localStorage.setItem('user', user);
+    localStorage.setItem('user', JSON.stringify(user));
     this.profileForm.patchValue(user);
   }
 
