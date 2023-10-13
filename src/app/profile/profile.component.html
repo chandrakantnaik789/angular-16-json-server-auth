@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <h2 style="text-align: center;">Update Profile</h2>
+            <img [src]="profilePicture" alt="Profile Picture"><br/><br/>
+            <button (click)="uploadProfile()">Add Profile Picture</button><br/><br/>
+            <textarea [(ngModel)]="bio" placeholder="Add Bio"></textarea><br/><br/>
+            <button (click)="updateProfile()">Update</button>&nbsp;
+            <button (click)="skipProfile()">Skip</button>&nbsp;
+        </div>
+    </div>
+</div>

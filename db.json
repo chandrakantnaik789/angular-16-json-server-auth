@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signUpUsers": [
+    {
+      "username": "sashi",
+      "password": "1234",
+      "confirmpassword": "1234",
+      "fullname": "Sashi Yadav",
+      "mobile": 986745,
+      "email": "sy@gmail.com",
+      "id": 1
+    },
+    {
+      "username": "Rashmi",
+      "password": "1234Abc*#",
+      "confirmpassword": "1234Abc*#",
+      "fullname": "Rashmi Parida",
+      "phonenumber": "1245566",
+      "email": "r@gmail.com",
+      "id": 2
+    },
+    {
+      "username": "Swati",
+      "password": "1234Acd*#",
+      "confirmpassword": "1234Acd*#",
+      "fullname": "Swati Mohapatra",
+      "phonenumber": "",
+      "email": "",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
