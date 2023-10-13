@@ -1,12 +1,28 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-8">
-            <h2 style="text-align: center;">Update Profile</h2>
-            <img [src]="profilePicture" alt="Profile Picture"><br/><br/>
-            <button (click)="uploadProfile()">Add Profile Picture</button><br/><br/>
-            <textarea [(ngModel)]="bio" placeholder="Add Bio"></textarea><br/><br/>
-            <button (click)="updateProfile()">Update</button>&nbsp;
-            <button (click)="skipProfile()">Skip</button>&nbsp;
-        </div>
-    </div>
-</div>
+<div class="container">
+    <h2>Update Your Profile</h2>
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="profilePicture" class="form-label">Profile Picture</label>
+        <input type="file" class="form-control" id="profilePicture" formControlName="profilePicture">
+      </div>
+      <div class="mb-3">
+        <label for="fullname" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="fullname" formControlName="fullname">
+      </div>
+      <div class="mb-3">
+        <label for="phonenumber" class="form-label">Phone Number</label>
+        <input type="text" class="form-control" id="phonenumber" formControlName="phonenumber">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+      </div>
+      <div class="mb-3">
+        <label for="bio" class="form-label">Bio</label>
+        <textarea class="form-control" id="bio" formControlName="bio"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+      <button type="button" class="btn btn-secondary" (click)="onSkip()">Skip</button>
+    </form>
+  </div>
+  

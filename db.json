@@ -8,12 +8,13 @@
   ],
   "users": [
     {
-      "email": "test@gmail.com",
-      "password": "$2a$10$lMzyA7nqhUEVzTN1830kyuMY3WaYqXXBa2TPHHF2XCWdaMzOmSQCi",
-      "username": "test",
-      "confirmpassword": "Test@123",
+      "profilePicture": "",
       "fullname": "test",
       "phonenumber": "1234567890",
+      "email": "test@gmail.com",
+      "bio": "",
+      "password": "$2a$10$mPO2SiE4WDH0VpH7HX20KehpG.MoKQ3LiYqI9dKT7z1AmrxW5CeKm",
+      "confirmpassword": "Test@123",
       "id": 1
     }
   ],
