@@ -1,0 +1,15 @@
+{
+    "/api": {
+      "target": "https://ominous-spoon-xrw47p7gw5whjg7-3000.app.github.dev",
+      "secure": false
+    },
+    "/login": {
+        "target": "https://ominous-spoon-xrw47p7gw5whjg7-3000.app.github.dev",
+        "secure": false
+      },
+      "/register": {
+        "target": "https://ominous-spoon-xrw47p7gw5whjg7-3000.app.github.dev",
+        "secure": false
+      }
+  }
+  
