@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { ForgotPasswordConfirmationComponent } from './forgot-password-confirmation/forgot-password-confirmation.component';
 
 const routes: Routes = [
   {
@@ -25,7 +26,10 @@ const routes: Routes = [
   },
   { path: 'account/forgot-password', 
     component: ForgetPasswordComponent
-  }
+  },
+  { path: 'account/forgot-password-confirmation', 
+  component: ForgotPasswordConfirmationComponent
+}
 ];
 
 @NgModule({

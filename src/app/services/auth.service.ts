@@ -5,7 +5,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-// Inject Firebase auth service private afAuth : AngularFireAuth
   constructor() { }
+
+  sendOTP(email: string) {
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+
+    localStorage.setItem('otp', otp);
+  }
 
 }

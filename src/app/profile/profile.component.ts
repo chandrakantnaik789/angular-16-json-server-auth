@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -11,7 +12,7 @@ export class ProfileComponent {
 
   profileForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private http : HttpClient,) {}
+  constructor(private fb: FormBuilder, private http : HttpClient, private router: Router) {}
 
   ngOnInit(): void {
     this.profileForm = this.fb.group({
@@ -26,6 +27,11 @@ export class ProfileComponent {
     });
 
     const user = JSON.parse(localStorage.getItem('user')!);
+
+    if(!user){
+      this.router.navigateByUrl('/account/forgot-password');
+    }
+
 
     this.profileForm.patchValue(user);
   }
