@@ -22,3 +22,7 @@ To install and use Angular 16 JSON Server Auth, follow the instructions in the [
 ## Documentation
 
 Check out the [documentation](link-to-your-documentation) for detailed installation and usage instructions.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
